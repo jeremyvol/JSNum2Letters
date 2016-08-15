@@ -29,11 +29,7 @@ function num2letters(number) {
                 hundreds = hundreds + " hundred";
             }
             if (number > 999) {
-                if (hundreds !== "") {
-                    thousands = thousands + " thousand, ";
-                } else {
-                    thousands = thousands + " thousand";
-                }
+                thousands = hundreds !== "" ? thousands + " thousand, " : thousands + " thousand";
             }
 
             //tens
@@ -49,7 +45,7 @@ function num2letters(number) {
                 tens = " and " + tens;
             }
 
-            // Units
+            // units
             if ((temp !== 1) && (number % 10) !== 0) {
                 if (tens !== "") {
                     units = " " + digits[number % 10 - 1];
