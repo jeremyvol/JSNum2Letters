@@ -59,12 +59,12 @@ function num2letters(number) {
 
             return thousands + hundreds + tens + units;
 
-        } else if (number === 0) {
+        } else if (number == 0) {
             return "zero";
         } else {
-            console.log("Number is out of range.");
+            return "Number is out of range.";
         }
     } else {
-        console.log("Parameter is not a number!");
+        return "This is not a number!";
     }
 }
